@@ -1,3 +1,9 @@
+import dubaiImage from './assets/510x340.jpg'
+import londonImage from './assets/510x340 (1).jpg'
+import newyorkImage from './assets/510x340 (2).jpg'
+import maldivesImage from './assets/510x340 (3).jpg'
+import a380Image from './assets/a380-sky-view-w300x300.jpg'
+
 function App() {
   return (
     <div>
@@ -102,13 +108,13 @@ function App() {
         </div>
       </div>
 
-      {/* Featured Destinations */}
+      {/* Featured Destinations - WITH YOUR IMAGES */}
       <div style={{ padding: '60px 40px', background: '#f8f8f8' }}>
         <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
           <h2 style={{ textAlign: 'center', fontSize: '32px', marginBottom: '40px' }}>Featured Destinations</h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '25px' }}>
             <div style={{ background: 'white', borderRadius: '10px', overflow: 'hidden', boxShadow: '0 2px 10px rgba(0,0,0,0.1)' }}>
-              <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=300" alt="Dubai" style={{ width: '100%', height: '200px', objectFit: 'cover' }} />
+              <img src={dubaiImage} alt="Dubai" style={{ width: '100%', height: '200px', objectFit: 'cover' }} />
               <div style={{ padding: '15px' }}>
                 <h3>Dubai</h3>
                 <p style={{ color: '#666' }}>United Arab Emirates</p>
@@ -116,7 +122,7 @@ function App() {
               </div>
             </div>
             <div style={{ background: 'white', borderRadius: '10px', overflow: 'hidden', boxShadow: '0 2px 10px rgba(0,0,0,0.1)' }}>
-              <img src="https://images.unsplash.com/photo-1448906654166-444d494666b3?w=300" alt="London" style={{ width: '100%', height: '200px', objectFit: 'cover' }} />
+              <img src={londonImage} alt="London" style={{ width: '100%', height: '200px', objectFit: 'cover' }} />
               <div style={{ padding: '15px' }}>
                 <h3>London</h3>
                 <p style={{ color: '#666' }}>United Kingdom</p>
@@ -124,7 +130,7 @@ function App() {
               </div>
             </div>
             <div style={{ background: 'white', borderRadius: '10px', overflow: 'hidden', boxShadow: '0 2px 10px rgba(0,0,0,0.1)' }}>
-              <img src="https://images.unsplash.com/photo-1485871981521-5b1fd3805eee?w=300" alt="New York" style={{ width: '100%', height: '200px', objectFit: 'cover' }} />
+              <img src={newyorkImage} alt="New York" style={{ width: '100%', height: '200px', objectFit: 'cover' }} />
               <div style={{ padding: '15px' }}>
                 <h3>New York</h3>
                 <p style={{ color: '#666' }}>United States</p>
@@ -132,7 +138,7 @@ function App() {
               </div>
             </div>
             <div style={{ background: 'white', borderRadius: '10px', overflow: 'hidden', boxShadow: '0 2px 10px rgba(0,0,0,0.1)' }}>
-              <img src="https://images.unsplash.com/photo-1514282401047-d79a71a590e8?w=300" alt="Maldives" style={{ width: '100%', height: '200px', objectFit: 'cover' }} />
+              <img src={maldivesImage} alt="Maldives" style={{ width: '100%', height: '200px', objectFit: 'cover' }} />
               <div style={{ padding: '15px' }}>
                 <h3>Maldives</h3>
                 <p style={{ color: '#666' }}>Maldives</p>
