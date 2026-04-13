@@ -1,153 +1,188 @@
 function App() {
   return (
-    <div style={{ fontFamily: 'Arial, sans-serif' }}>
+    <div>
       {/* Top Banner */}
-      <div style={{ background: '#1a1a1a', color: 'white', padding: '10px', textAlign: 'center', fontSize: '14px' }}>
-        ✈️ Enjoy flexible travel with <strong>FREE DATE CHANGE</strong> on all new tickets
+      <div style={{ background: '#1a1a1a', color: '#c49a6c', padding: '10px', textAlign: 'center', fontSize: '13px' }}>
+        ✈️ ENJOY FLEXIBLE TRAVEL WITH <strong style={{ color: '#d71920' }}>FREE DATE CHANGE</strong> ON ALL NEW TICKETS
       </div>
 
       {/* Navigation Bar */}
-      <nav style={{ background: '#d71920', padding: '15px 40px', color: 'white', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap' }}>
-        <div style={{ fontSize: '24px', fontWeight: 'bold' }}>EMIRATES</div>
-        <div style={{ display: 'flex', gap: '20px', flexWrap: 'wrap' }}>
-          <span style={{ cursor: 'pointer' }}>Search flights</span>
-          <span style={{ cursor: 'pointer' }}>Manage booking / Check in</span>
-          <span style={{ cursor: 'pointer' }}>What's on your flight</span>
-          <span style={{ cursor: 'pointer' }}>Flight status</span>
+      <nav style={{ background: 'white', padding: '20px 40px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', boxShadow: '0 2px 10px rgba(0,0,0,0.05)' }}>
+        <div style={{ fontSize: '28px', fontWeight: 'bold', color: '#d71920' }}>EMIRATES</div>
+        <div style={{ display: 'flex', gap: '30px' }}>
+          <a href="#" style={{ textDecoration: 'none', color: '#333' }}>Book</a>
+          <a href="#" style={{ textDecoration: 'none', color: '#333' }}>Manage</a>
+          <a href="#" style={{ textDecoration: 'none', color: '#333' }}>Where We Fly</a>
+          <a href="#" style={{ textDecoration: 'none', color: '#d71920', fontWeight: 'bold' }}>Skywards</a>
         </div>
       </nav>
 
       {/* Hero Section with Flight Search */}
-      <div style={{ background: 'linear-gradient(135deg, #1e3c72 0%, #2a5298 100%)', padding: '50px 40px' }}>
-        <div style={{ maxWidth: '1200px', margin: '0 auto', background: 'white', borderRadius: '15px', padding: '30px' }}>
-          <h2 style={{ marginBottom: '20px', color: '#333' }}>Search flights</h2>
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr auto', gap: '20px' }}>
-            <div>
-              <label style={{ display: 'block', marginBottom: '5px', fontWeight: 'bold' }}>Departure airport</label>
-              <select style={{ width: '100%', padding: '12px', borderRadius: '5px', border: '1px solid #ddd' }}>
-                <option>Karachi (KHI)</option>
-                <option>Islamabad (ISB)</option>
-                <option>Lahore (LHE)</option>
-                <option>Dubai (DXB)</option>
-              </select>
+      <div style={{ 
+        background: 'linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200")',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        minHeight: '550px',
+        display: 'flex',
+        alignItems: 'center',
+        padding: '40px'
+      }}>
+        <div style={{ maxWidth: '1200px', margin: '0 auto', width: '100%' }}>
+          <div style={{ background: 'white', borderRadius: '12px', padding: '35px', boxShadow: '0 20px 40px rgba(0,0,0,0.15)' }}>
+            <h2 style={{ marginBottom: '25px', color: '#333' }}>Book your flight</h2>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '20px' }}>
+              <div>
+                <label style={{ display: 'block', marginBottom: '8px', fontWeight: 'bold' }}>From</label>
+                <select style={{ width: '100%', padding: '14px', border: '1px solid #ddd', borderRadius: '5px' }}>
+                  <option>Karachi (KHI)</option>
+                  <option>Islamabad (ISB)</option>
+                  <option>Lahore (LHE)</option>
+                  <option>Dubai (DXB)</option>
+                </select>
+              </div>
+              <div>
+                <label style={{ display: 'block', marginBottom: '8px', fontWeight: 'bold' }}>To</label>
+                <select style={{ width: '100%', padding: '14px', border: '1px solid #ddd', borderRadius: '5px' }}>
+                  <option>Dubai (DXB)</option>
+                  <option>London (LHR)</option>
+                  <option>New York (JFK)</option>
+                  <option>Toronto (YYZ)</option>
+                </select>
+              </div>
+              <div>
+                <label style={{ display: 'block', marginBottom: '8px', fontWeight: 'bold' }}>Departure</label>
+                <input type="date" style={{ width: '100%', padding: '14px', border: '1px solid #ddd', borderRadius: '5px' }} />
+              </div>
+              <div>
+                <label style={{ display: 'block', marginBottom: '8px', fontWeight: 'bold' }}>Return</label>
+                <input type="date" style={{ width: '100%', padding: '14px', border: '1px solid #ddd', borderRadius: '5px' }} />
+              </div>
             </div>
-            <div>
-              <label style={{ display: 'block', marginBottom: '5px', fontWeight: 'bold' }}>Arrival airport</label>
-              <select style={{ width: '100%', padding: '12px', borderRadius: '5px', border: '1px solid #ddd' }}>
-                <option>Dubai (DXB)</option>
-                <option>London (LHR)</option>
-                <option>New York (JFK)</option>
-                <option>Karachi (KHI)</option>
-              </select>
-            </div>
-            <div style={{ display: 'flex', alignItems: 'flex-end' }}>
-              <button style={{ padding: '12px 40px', background: '#d71920', color: 'white', border: 'none', borderRadius: '5px', cursor: 'pointer', fontWeight: 'bold' }}>
-                Continue
-              </button>
-            </div>
+            <button style={{ marginTop: '25px', background: '#d71920', color: 'white', border: 'none', padding: '14px', borderRadius: '5px', fontWeight: 'bold', cursor: 'pointer', width: '100%' }}>
+              SEARCH FLIGHTS
+            </button>
           </div>
         </div>
       </div>
 
       {/* Services Section */}
-      <div style={{ padding: '40px', background: '#f5f5f5' }}>
-        <div style={{ maxWidth: '1200px', margin: '0 auto', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))', gap: '20px', textAlign: 'center' }}>
-          <div><span style={{ fontSize: '30px' }}>🏨</span><br />Hotels</div>
-          <div><span style={{ fontSize: '30px' }}>🚗</span><br />Car rentals</div>
-          <div><span style={{ fontSize: '30px' }}>🎯</span><br />Tours & activities</div>
-          <div><span style={{ fontSize: '30px' }}>📅</span><br />Book a holiday</div>
-          <div><span style={{ fontSize: '30px' }}>🏙️</span><br />Dubai Experience</div>
-          <div><span style={{ fontSize: '30px' }}>🚙</span><br />Chauffeur-drive</div>
+      <div style={{ padding: '50px 40px', background: '#f8f8f8' }}>
+        <div style={{ maxWidth: '1200px', margin: '0 auto', display: 'grid', gridTemplateColumns: 'repeat(6, 1fr)', gap: '20px', textAlign: 'center' }}>
+          <div><span style={{ fontSize: '35px' }}>🏨</span><br />Hotels</div>
+          <div><span style={{ fontSize: '35px' }}>🚗</span><br />Car rentals</div>
+          <div><span style={{ fontSize: '35px' }}>🎯</span><br />Tours</div>
+          <div><span style={{ fontSize: '35px' }}>📅</span><br />Holidays</div>
+          <div><span style={{ fontSize: '35px' }}>🏙️</span><br />Dubai Exp</div>
+          <div><span style={{ fontSize: '35px' }}>🚙</span><br />Chauffeur</div>
         </div>
       </div>
 
-      {/* Skywards Membership */}
-      <div style={{ padding: '40px', background: 'white' }}>
-        <div style={{ maxWidth: '1200px', margin: '0 auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap' }}>
-          <div>
-            <h2>Join Emirates Skywards</h2>
-            <p>Become an Emirates Skywards member and start enjoying flight rewards, upgrades and more.</p>
-            <button style={{ padding: '12px 30px', background: '#d71920', color: 'white', border: 'none', borderRadius: '5px', cursor: 'pointer', marginTop: '10px' }}>
-              Join now
-            </button>
+      {/* Why Fly Emirates */}
+      <div style={{ padding: '60px 40px', background: 'white' }}>
+        <div style={{ maxWidth: '1200px', margin: '0 auto', textAlign: 'center' }}>
+          <h2 style={{ fontSize: '32px', marginBottom: '15px' }}>Why fly with Emirates?</h2>
+          <p style={{ color: '#666', marginBottom: '40px' }}>Experience the difference with our award-winning service</p>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '40px' }}>
+            <div>
+              <div style={{ fontSize: '50px' }}>🌍</div>
+              <h3>Global Network</h3>
+              <p style={{ color: '#666' }}>150+ destinations</p>
+            </div>
+            <div>
+              <div style={{ fontSize: '50px' }}>✨</div>
+              <h3>Award-winning</h3>
+              <p style={{ color: '#666' }}>World-class service</p>
+            </div>
+            <div>
+              <div style={{ fontSize: '50px' }}>📱</div>
+              <h3>Connectivity</h3>
+              <p style={{ color: '#666' }}>Onboard WiFi</p>
+            </div>
           </div>
-          <div style={{ fontSize: '50px' }}>⭐</div>
         </div>
       </div>
 
       {/* Featured Destinations */}
-      <div style={{ padding: '40px', background: '#f5f5f5' }}>
+      <div style={{ padding: '60px 40px', background: '#f8f8f8' }}>
         <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
-          <h2 style={{ textAlign: 'center', marginBottom: '30px' }}>Featured destinations from Pakistan</h2>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '20px' }}>
-            <div style={{ background: 'white', borderRadius: '10px', overflow: 'hidden', boxShadow: '0 2px 5px rgba(0,0,0,0.1)' }}>
-              <div style={{ height: '150px', background: '#1e3c72', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', fontSize: '50px' }}>🇬🇧</div>
+          <h2 style={{ textAlign: 'center', fontSize: '32px', marginBottom: '40px' }}>Featured Destinations</h2>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '25px' }}>
+            <div style={{ background: 'white', borderRadius: '10px', overflow: 'hidden', boxShadow: '0 2px 10px rgba(0,0,0,0.1)' }}>
+              <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=300" alt="Dubai" style={{ width: '100%', height: '200px', objectFit: 'cover' }} />
               <div style={{ padding: '15px' }}>
-                <h3>UNITED KINGDOM</h3>
-                <p>London</p>
-                <button style={{ background: 'none', border: 'none', color: '#d71920', cursor: 'pointer' }}>Discover for yourself →</button>
+                <h3>Dubai</h3>
+                <p style={{ color: '#666' }}>United Arab Emirates</p>
+                <p style={{ color: '#d71920', fontWeight: 'bold' }}>from $499</p>
               </div>
             </div>
-            <div style={{ background: 'white', borderRadius: '10px', overflow: 'hidden', boxShadow: '0 2px 5px rgba(0,0,0,0.1)' }}>
-              <div style={{ height: '150px', background: '#2a5298', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', fontSize: '50px' }}>🇦🇪</div>
+            <div style={{ background: 'white', borderRadius: '10px', overflow: 'hidden', boxShadow: '0 2px 10px rgba(0,0,0,0.1)' }}>
+              <img src="https://images.unsplash.com/photo-1448906654166-444d494666b3?w=300" alt="London" style={{ width: '100%', height: '200px', objectFit: 'cover' }} />
               <div style={{ padding: '15px' }}>
-                <h3>UNITED ARAB EMIRATES</h3>
-                <p>Dubai</p>
-                <button style={{ background: 'none', border: 'none', color: '#d71920', cursor: 'pointer' }}>Discover for yourself →</button>
+                <h3>London</h3>
+                <p style={{ color: '#666' }}>United Kingdom</p>
+                <p style={{ color: '#d71920', fontWeight: 'bold' }}>from $599</p>
               </div>
             </div>
-            <div style={{ background: 'white', borderRadius: '10px', overflow: 'hidden', boxShadow: '0 2px 5px rgba(0,0,0,0.1)' }}>
-              <div style={{ height: '150px', background: '#1e5c72', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', fontSize: '50px' }}>🇵🇰</div>
+            <div style={{ background: 'white', borderRadius: '10px', overflow: 'hidden', boxShadow: '0 2px 10px rgba(0,0,0,0.1)' }}>
+              <img src="https://images.unsplash.com/photo-1485871981521-5b1fd3805eee?w=300" alt="New York" style={{ width: '100%', height: '200px', objectFit: 'cover' }} />
               <div style={{ padding: '15px' }}>
-                <h3>PAKISTAN</h3>
-                <p>Karachi</p>
-                <button style={{ background: 'none', border: 'none', color: '#d71920', cursor: 'pointer' }}>Discover for yourself →</button>
+                <h3>New York</h3>
+                <p style={{ color: '#666' }}>United States</p>
+                <p style={{ color: '#d71920', fontWeight: 'bold' }}>from $699</p>
               </div>
             </div>
-            <div style={{ background: 'white', borderRadius: '10px', overflow: 'hidden', boxShadow: '0 2px 5px rgba(0,0,0,0.1)' }}>
-              <div style={{ height: '150px', background: '#2a5c98', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', fontSize: '50px' }}>🇲🇻</div>
+            <div style={{ background: 'white', borderRadius: '10px', overflow: 'hidden', boxShadow: '0 2px 10px rgba(0,0,0,0.1)' }}>
+              <img src="https://images.unsplash.com/photo-1514282401047-d79a71a590e8?w=300" alt="Maldives" style={{ width: '100%', height: '200px', objectFit: 'cover' }} />
               <div style={{ padding: '15px' }}>
-                <h3>MALDIVES</h3>
-                <p>Male</p>
-                <button style={{ background: 'none', border: 'none', color: '#d71920', cursor: 'pointer' }}>Discover for yourself →</button>
+                <h3>Maldives</h3>
+                <p style={{ color: '#666' }}>Maldives</p>
+                <p style={{ color: '#d71920', fontWeight: 'bold' }}>from $799</p>
               </div>
             </div>
-          </div>
-          <div style={{ textAlign: 'center', marginTop: '30px' }}>
-            <button style={{ padding: '12px 30px', background: '#d71920', color: 'white', border: 'none', borderRadius: '5px', cursor: 'pointer' }}>
-              More destinations →
-            </button>
           </div>
         </div>
       </div>
 
+      {/* Skywards Membership */}
+      <div style={{ padding: '60px 40px', background: 'linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%)', color: 'white' }}>
+        <div style={{ maxWidth: '1200px', margin: '0 auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap' }}>
+          <div>
+            <h2 style={{ fontSize: '32px', marginBottom: '15px' }}>Join Emirates Skywards</h2>
+            <p style={{ fontSize: '18px', marginBottom: '20px' }}>Earn Miles, get rewards, and enjoy exclusive benefits</p>
+            <button style={{ background: '#c49a6c', color: '#1a1a1a', border: 'none', padding: '14px 32px', borderRadius: '5px', fontWeight: 'bold', cursor: 'pointer' }}>
+              Join for free
+            </button>
+          </div>
+          <div style={{ fontSize: '80px' }}>⭐</div>
+        </div>
+      </div>
+
       {/* Footer */}
-      <div style={{ background: '#1a1a1a', color: 'white', padding: '40px' }}>
-        <div style={{ maxWidth: '1200px', margin: '0 auto', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '30px' }}>
+      <div style={{ background: '#1a1a1a', color: '#999', padding: '50px 40px 30px' }}>
+        <div style={{ maxWidth: '1200px', margin: '0 auto', display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '30px' }}>
           <div>
-            <h4>About us</h4>
-            <p>Learn more about our history, our business and sustainability initiatives</p>
+            <h3 style={{ color: 'white', marginBottom: '15px' }}>About Emirates</h3>
+            <p style={{ fontSize: '14px' }}>We connect people and places across the globe with award-winning service.</p>
           </div>
           <div>
-            <h4>Our business</h4>
-            <p>Our planet</p>
-            <p>Our people</p>
-            <p>Our communities</p>
+            <h3 style={{ color: 'white', marginBottom: '15px' }}>Quick Links</h3>
+            <p style={{ fontSize: '14px', marginBottom: '8px' }}>Flight Status</p>
+            <p style={{ fontSize: '14px', marginBottom: '8px' }}>Baggage Information</p>
+            <p style={{ fontSize: '14px' }}>Special Assistance</p>
           </div>
           <div>
-            <h4>Help</h4>
-            <p>Create your Dubai Experience</p>
-            <p>Premium Economy</p>
-            <p>Economy Class</p>
+            <h3 style={{ color: 'white', marginBottom: '15px' }}>Connect</h3>
+            <p style={{ fontSize: '14px', marginBottom: '8px' }}>Facebook</p>
+            <p style={{ fontSize: '14px', marginBottom: '8px' }}>Instagram</p>
+            <p style={{ fontSize: '14px' }}>Twitter</p>
           </div>
           <div>
-            <h4>Connect</h4>
-            <p>Join Emirates Skywards</p>
-            <p>Skywards+</p>
+            <h3 style={{ color: 'white', marginBottom: '15px' }}>Download App</h3>
+            <p style={{ fontSize: '14px' }}>Manage your booking on the go</p>
           </div>
         </div>
-        <div style={{ textAlign: 'center', marginTop: '30px', paddingTop: '20px', borderTop: '1px solid #333' }}>
-          <p>© 2024 Emirates. All rights reserved.</p>
+        <div style={{ textAlign: 'center', marginTop: '40px', paddingTop: '20px', borderTop: '1px solid #333' }}>
+          <p style={{ fontSize: '12px' }}>© 2024 Emirates. All rights reserved.</p>
         </div>
       </div>
     </div>
