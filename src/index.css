@@ -1,2 +1,739 @@
-* { margin: 0; padding: 0; box-sizing: border-box; } 
-body { margin: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; } 
+/* ========================================
+   EMIRATES WEBSITE - RESPONSIVE STYLES
+   Senior Developer Edition
+   ======================================== */
+
+/* Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  overflow-x: hidden;
+}
+
+/* ========================================
+   DESKTOP FIRST DESIGN (Default)
+   ======================================== */
+
+/* Navigation - Desktop */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background: white;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+  color: #d71920;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  color: #d71920;
+}
+
+/* Hamburger Menu - Hidden on desktop */
+.hamburger {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+  color: #d71920;
+}
+
+/* Flight Search Grid - Desktop */
+.search-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+/* Services Grid - Desktop */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 20px;
+  text-align: center;
+}
+
+/* Features Grid - Desktop */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  text-align: center;
+}
+
+/* Offers Grid - Desktop */
+.offers-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+/* Cabins Grid - Desktop */
+.cabins-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+/* Destinations Grid - Desktop */
+.destinations-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+
+/* Reviews Grid - Desktop */
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+/* Skywards Tiers Grid - Desktop */
+.tiers-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+/* Footer Grid - Desktop */
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+/* Section Padding */
+.section {
+  padding: 60px 40px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Buttons */
+.btn-primary {
+  background: #d71920;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: #b81218;
+  transform: translateY(-2px);
+}
+
+/* Cards */
+.card {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 15px;
+}
+
+/* ========================================
+   TABLET RESPONSIVE (768px - 1024px)
+   ======================================== */
+
+@media (max-width: 1024px) {
+  .container {
+    padding: 0 20px;
+  }
+  
+  .services-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+  
+  .destinations-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .reviews-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .tiers-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ========================================
+   MOBILE RESPONSIVE (320px - 768px)
+   ======================================== */
+
+@media (max-width: 768px) {
+  /* Navigation - Mobile */
+  .navbar {
+    padding: 15px 20px;
+  }
+  
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    background: white;
+    flex-direction: column;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    gap: 15px;
+  }
+  
+  .nav-links.active {
+    display: flex;
+  }
+  
+  .hamburger {
+    display: block;
+  }
+  
+  /* Section Padding - Mobile */
+  .section {
+    padding: 40px 20px;
+  }
+  
+  /* Headings - Mobile */
+  h1, h2 {
+    font-size: 24px !important;
+  }
+  
+  /* Flight Search - Mobile */
+  .search-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  
+  /* Services - Mobile */
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  
+  /* Features - Mobile */
+  .features-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  /* Offers - Mobile */
+  .offers-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  /* Cabins - Mobile */
+  .cabins-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  /* Destinations - Mobile */
+  .destinations-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  /* Reviews - Mobile */
+  .reviews-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  /* Tiers - Mobile */
+  .tiers-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  /* Footer - Mobile */
+  .footer-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 25px;
+  }
+  
+  /* Buttons - Mobile */
+  .btn-primary {
+    width: 100%;
+    padding: 14px;
+  }
+  
+  /* Card Images - Mobile */
+  .card-image {
+    height: 180px;
+  }
+  
+  /* Hero Section - Mobile */
+  .hero-section {
+    padding: 30px 20px !important;
+    min-height: 450px !important;
+  }
+  
+  /* Skywards Section - Mobile */
+  .skywards-section {
+    text-align: center;
+    flex-direction: column;
+  }
+  
+  /* Typography - Mobile */
+  body {
+    font-size: 14px;
+  }
+  
+  input, select, button {
+    font-size: 16px; /* Prevents zoom on iOS */
+  }
+}
+
+/* ========================================
+   SMALL MOBILE (320px - 480px)
+   ======================================== */
+
+@media (max-width: 480px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .logo {
+    font-size: 20px;
+  }
+  
+  .hamburger {
+    font-size: 24px;
+  }
+  
+  .card-image {
+    height: 150px;
+  }
+  
+  .section {
+    padding: 30px 15px;
+  }
+}
+
+/* Top Banner */
+.top-banner {
+  background: #1a1a1a;
+  color: #c49a6c;
+  padding: 10px;
+  text-align: center;
+  font-size: 13px;
+}
+
+/* Hero Section */
+.hero-section {
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200');
+  background-size: cover;
+  background-position: center;
+  min-height: 550px;
+  display: flex;
+  align-items: center;
+  padding: 40px;
+}
+
+/* Search Card */
+.search-card {
+  background: white;
+  border-radius: 12px;
+  padding: 35px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.search-card h2 {
+  margin-bottom: 25px;
+  color: #333;
+}
+
+.search-card label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.search-card select,
+.search-card input {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+/* Button Full Width */
+.btn-full {
+  width: 100%;
+  margin-top: 25px;
+}
+
+/* Subtitle */
+.subtitle {
+  color: #666;
+  margin-bottom: 40px;
+}
+
+/* Feature Icon */
+.feature-icon {
+  font-size: 50px;
+  margin-bottom: 15px;
+}
+
+/* Offer Card */
+.offer-card {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.offer-emoji {
+  font-size: 40px;
+}
+
+.offer-price {
+  color: #d71920;
+  font-size: 24px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+/* Cabin Card */
+.cabin-card {
+  background: #f8f8f8;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.cabin-icon {
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 50px;
+}
+
+.cabin-icon.economy { background: #1a1a1a; }
+.cabin-icon.business { background: #2d2d2d; }
+.cabin-icon.first { background: #c49a6c; }
+
+.cabin-content {
+  padding: 20px;
+}
+
+.cabin-price {
+  color: #d71920;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* Price */
+.price {
+  color: #d71920;
+  font-weight: bold;
+}
+
+/* Review Card */
+.review-card {
+  text-align: center;
+  padding: 20px;
+}
+
+.stars {
+  font-size: 50px;
+}
+
+/* Skywards Section */
+.skywards-section {
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  color: white;
+}
+
+.skywards-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.skywards-star {
+  font-size: 80px;
+}
+
+.btn-gold {
+  background: #c49a6c;
+  color: #1a1a1a;
+  border: none;
+  padding: 14px 32px;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Tier Card */
+.tier-card {
+  background: white;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.tier-price {
+  color: #d71920;
+  font-weight: bold;
+}
+
+/* App Banner */
+.app-banner {
+  background: #d71920;
+  color: white;
+}
+
+.app-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.app-icon {
+  font-size: 80px;
+}
+
+.app-buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.btn-white {
+  background: white;
+  color: #d71920;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* Newsletter */
+.newsletter {
+  background: #1a1a1a;
+  color: white;
+}
+
+.newsletter-flex {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.newsletter-input {
+  flex: 1;
+  padding: 12px;
+  border-radius: 5px;
+  border: none;
+}
+
+/* Footer */
+.footer {
+  background: #0d0d0d;
+  color: #999;
+  padding: 50px 40px 30px;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #333;
+}
+
+.footer-bottom p {
+  font-size: 12px;
+}
+
+/* Status Flex */
+.status-flex {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.status-input {
+  padding: 12px;
+  width: 200px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+/* Background Colors */
+.bg-white {
+  background: white;
+}
+
+.bg-offer {
+  background: #fff3e0;
+}
+
+/* Skywards Link */
+.skywards-link {
+  color: #d71920 !important;
+  font-weight: bold !important;
+}
+
+/* Button Small */
+.btn-small {
+  margin-top: 15px;
+  padding: 10px 20px;
+}
+
+/* ========================================
+   UTILITY CLASSES
+   ======================================== */
+
+.text-center {
+  text-align: center;
+}
+
+.text-red {
+  color: #d71920;
+}
+
+.text-gold {
+  color: #c49a6c;
+}
+
+.bg-dark {
+  background: #1a1a1a;
+  color: white;
+}
+
+.bg-light {
+  background: #f8f8f8;
+}
+
+.mt-20 {
+  margin-top: 20px;
+}
+
+.mb-20 {
+  margin-bottom: 20px;
+}
+
+/* ========================================
+   FIXED RESPONSIVE CARDS
+   ======================================== */
+
+/* Make all cards full width on mobile */
+@media (max-width: 768px) {
+  .card, .offer-card, .cabin-card, .tier-card, .review-card {
+    width: 100% !important;
+    margin-bottom: 20px !important;
+  }
+  
+  /* Fix destination cards */
+  .destinations-grid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+  
+  /* Fix offers grid */
+  .offers-grid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+  
+  /* Fix cabins grid */
+  .cabins-grid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+  
+  /* Fix reviews grid */
+  .reviews-grid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+  
+  /* Fix tiers grid */
+  .tiers-grid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 15px !important;
+  }
+  
+  /* Make images responsive */
+  .card-image {
+    width: 100% !important;
+    height: auto !important;
+    max-height: 200px !important;
+    object-fit: cover !important;
+  }
+  
+  /* Center card content */
+  .card-content {
+    text-align: center !important;
+  }
+  
+  /* Fix cabin cards */
+  .cabin-card {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+  
+  .cabin-icon {
+    height: 150px !important;
+  }
+}
